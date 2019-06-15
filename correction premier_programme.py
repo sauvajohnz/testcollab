@@ -1,6 +1,6 @@
 import os # On importe une librairie nommee OS
 
-def traiter_x(x): # On creer une fonction qui traite un nombre selon un certain nombre d'operaitions
+def traiter_x(x): # On creer une fonction qui traite un nombre selon un certain nombre d'operations
 	return (x+2)*2
 
 print("Le programme va vous demander de choisir en boucle des valeurs de x")
@@ -9,10 +9,10 @@ print("Pour sortir, il suffira de choisir la valeur 0.\n\n")
 while(1==1):
 	test_valeur = False
 	while test_valeur==False:
-		try:
+		try: # On test si la valeur contient une erreur
 			nombre_utilisateur = int(input("Rentrer la valeur de x : ")) # On demande a l'utilisateur de rentrer un nombre dans la variable nombre_utilisateur
 			test_valeur = True
-		except ValueError:
+		except ValueError: # Si le nombre entré par l'utilisateur n'est pas un chiffre, on lui redemande de saisir
 			print("Erreur dans la valeur de x\n")
 			test_valeur = False	
 
