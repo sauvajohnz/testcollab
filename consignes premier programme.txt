@@ -14,7 +14,7 @@ On obtient le resultat final
 
 Exemple de programme fini :
 
-Le programme va vous demander de choisir en bouche des valeurs de x.
+Le programme va vous demander de choisir en boucle des valeurs de x.
 Pour sortir, il suffira de choisir la valeur 0.
 
 -----------------------------
