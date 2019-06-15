@@ -8,9 +8,6 @@ argent = 100
 argent_mise = 0
 continuer_jeu = True
 tour = 1
-confirmation_case = True
-confirmation_argent = True
-confirmation_rejouer = True
 
 def status_partie():
 	print("-                     Tour ",tour,"                  -")
@@ -44,31 +41,23 @@ status_partie()
 
 while(continuer_jeu):
 
-	confirmation_argent = True
-	confirmation_case = True
-	confirmation_rejouer = True
-
-	while(confirmation_argent):
+	while(argent_mise <= 1 or argent_mise > argent):
 		try:
 			argent_mise = int(input("Argent a miser : "))
 			if argent_mise > argent:
-				print("Vous n'avez pas assez d'argent !")
+				print("Vous n'avez pas assez d'argent, vous n'avez que",argent,"€")
 			elif argent_mise < 2:
 				print("Vous devez miser au moins 2€ !")
 			else:
 				print("Vous avez misé",argent_mise,"€!")
-				argent-= argent_mise
-				confirmation_argent = False
 		except ValueError:
 			print("Vous n\'avez pas entré un nombre")
-
-
-	while(confirmation_case):
+	case_mise = int()
+	argent-= argent_mise		
+	while(case_mise <= 0 or case_mise >= 50):
 		try:
 			case_mise = int(input("\nCase à miser (0-49) : "))
-			if case_mise >= 0 and case_mise <=49:
-				confirmation_case = False
-			else:
+			if case_mise <= 0 or case_mise >= 50:
 				print("Ce n\'est pas une case valide !")
 
 		except ValueError:
@@ -91,22 +80,23 @@ while(continuer_jeu):
 		argent+= ceil((argent_mise*1.5))
 	else:
 		print("Désolé, vous perdez votre mise")
+	case_mise = -1
+	argent_mise = 0
+	rejouer = " "
 
 	print("\nVotre argent: ",argent,"€")
-
+	rejouer = str(" ")
 	if argent <= 2:
-		while(confirmation_rejouer):
+		while(rejouer!="oui" and rejouer!="non"):
 			try:
 				rejouer = str(input("\nVoulez vous rejouer ? (oui/non) : "))
 				if rejouer == "non":
 					continuer_jeu = False
-					confirmation_rejouer = False
 				elif rejouer == "oui":
 					print("Rejouons !")
 					os.system("cls")
 					tour = 1
 					argent = 100
-					confirmation_rejouer = False
 					status_partie()
 				else:
 					print("Vous n'avez pas entré une réponse correcte")
