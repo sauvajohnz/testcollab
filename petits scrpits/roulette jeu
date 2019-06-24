@@ -1,0 +1,5 @@
+import os
+from random import randrange
+
+
+os.system("pause")
