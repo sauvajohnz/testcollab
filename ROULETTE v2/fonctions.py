@@ -19,7 +19,9 @@ def charger_roulette():
 			argent = mon_depickler.load()
 			scores_log = mon_depickler.load()
 	else:
-		sauvegarder_roulette()
+		Mon_fichier = open("data/donnees.txt", "wb")
+		Mon_fichier.close()
+
 
 def avoir_date():
 	ma_date= datetime.datetime.now()
