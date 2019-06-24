@@ -1,0 +1,34 @@
+** JEU CASINO **
+
+Si c'est la première fois que l'application
+est lancée -> règles
+pour confirmer de les avoirs lues -> appuyer entrer
+
+Choisir avec un menu le mini jeu
+-> Roulette pour l'instant
+-> Pendu après
+
+POUR ROULETTE
+Demander la case et la mise
+Sauvegarder l'argent dans un fichier
+
+Fichier avec fonctions:
+-calculer_gain(numero choisi, numero hasard)
+ A la fin du tour expliquer les gain et demander
+ de rejouer (o/n) 
+ -demander la mise
+ -demander la case 
+ -demander si il veut rejouer
+ -demander si il veut choisir la roulette
+ -demander le espace
+
+le nombre de tours et le score est sauvegardé avec le jour et le profit 
+Faire un autre script pour afficher les scores
+
+
+FICHIERS:
+
+script.py
+fonctions.py
+scores.py
+données.txt 
