@@ -53,7 +53,7 @@ def menu_nv_joueur():
 
 def menu():
 	global nombre_mise, profit, nv_joueur
-	if nv_joueur == True:
+	if nv_joueur:
 		menu_nv_joueur()
 		demander_choix("Continuer ? (o/n) :")
 	nv_joueur = False
